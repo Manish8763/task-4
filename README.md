@@ -1,32 +1,35 @@
-Task 4: Windows Firewall Configuration and Testing
-Objective
-Configure a basic firewall rule to block specific network traffic and test its effectiveness.
+# Task 4: Windows Firewall Configuration and Testing
 
-Tool Used
-Windows Defender Firewall
+## 🎯 Objective
+Configure a basic firewall rule to block specific network traffic and verify its effect.
 
-Summary
-Firewall Rule Setup
+## 🛠 Tool Used
+- Windows Defender Firewall
 
-Created a custom inbound rule to block Port 23 (Telnet).
+## 🔧 Steps Performed
 
-Telnet Client Configuration
+### 1. Firewall Rule Creation
+- Created a custom **inbound rule**.
+- Blocked **Port 23** (used by Telnet) to demonstrate securing an insecure service.
 
-Enabled Telnet via Windows Features.
+### 2. Telnet Client Setup
+- Enabled **Telnet Client** via Windows Features.
 
-Testing
+### 3. Rule Testing
+- Used Command Prompt to initiate a Telnet connection.
+- Connection was blocked — confirming the firewall rule is active.
 
-Attempted to connect using Telnet via Command Prompt.
+### 4. Firewall Rule Behavior
+- Rules can be based on:
+  - **Port** (e.g., 23, 80)
+  - **Protocol** (TCP/UDP)
+  - **Direction** (Inbound/Outbound)
+  - **Application/Service**
+  - **Network Type** (Domain/Private/Public)
+- Rule evaluation:
+  - If a matching **allow** rule is found → traffic allowed.
+  - If a matching **block** rule is found first → traffic denied.
+  - If no rule matches → default policy applies.
 
-Connection failed, confirming the rule worked.
-
-Firewall Behavior
-
-Rules control traffic by:
-
-Port, Protocol, Direction, Application, Network Type.
-
-Rule priority: Allow > Block > Default policy.
-
-Conclusion
-Successfully blocked Telnet traffic, demonstrating how firewall rules enhance system security.
+## ✅ Conclusion
+Firewall successfully blocked Telnet traffic on port 23. This confirms that properly configured rules can protect systems from unauthorized access.
